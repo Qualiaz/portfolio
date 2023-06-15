@@ -1,11 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
 import svgDropDown from "../assets/drop-down.svg";
-import asd from "../assets/asd.gif";
 import { ActiveProjectContext } from "../pages/Projects";
 
 const Project = ({ name, imgSrc }) => {
-  //   const [isDropdown, setIsDropdown] = useState(false);
   const [roundedClass, setRoundedClass] = useState("rounded-md");
   const { activeProject, onSetActive } = useContext(ActiveProjectContext);
   const isActive = activeProject === name;
@@ -30,8 +28,7 @@ const Project = ({ name, imgSrc }) => {
         <motion.img
           className="w-6 hover:cursor-pointer"
           src={svgDropDown}
-          alt=""
-          //   onClick={() => setIsDropdown(!isDropdown)}
+          alt="toggle image"
           onClick={() => onSetActive(name)}
           animate={{ rotate: isActive ? 180 : 0 }}
           transition={{ duration: 0.3 }}
