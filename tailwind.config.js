@@ -6,6 +6,7 @@ export default {
       colors: {
         orange: "#FF5C00",
         lgrey: "#4B4B4B",
+        required: "#EB0606",
       },
     },
   },
