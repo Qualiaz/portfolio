@@ -3,8 +3,8 @@ import illustration from "../assets/placeholder-illustration.png";
 
 const Profile = () => {
   return (
-    <div className="profile flex flex-col items-center justify-center h-full p-3">
-      <div className="illustration mb-10">
+    <div className="flex flex-col items-center justify-center h-full p-3 mt-10">
+      <div className="mb-10">
         <img src={illustration} alt="" />
       </div>
       <div className="flex flex-col justify-center gap-2">

@@ -4,6 +4,9 @@ import svgCurveUnderline from "../assets/curve-underline.svg";
 import useAutoSizeTextArea from "../hooks/useAutosizeTextArea";
 import svgSend from "../assets/send.svg";
 import svgRequired from "../assets/required.svg";
+import { db } from "../firebase/firebase.config";
+import { collection, addDoc } from "firebase/firestore";
+import useSendMessageToDb from "../hooks/useSendMessageToDb";
 
 const Required = ({ field }) => {
   const [isTextVisible, setIsTextVisible] = useState(false);
@@ -57,19 +60,25 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [client, setClient] = useState({});
   const [isClientInfoBtnPressed, setIsClientInfoBtnPressed] = useState(false);
+  const [sendMessage, error] = useSendMessageToDb();
 
   const textareaRef = useRef();
   const [value, setValue] = useState("");
 
   useAutoSizeTextArea(textareaRef.current, value, setHeight);
-  const handleChange = (e) => {
+
+  const handleChangeMessage = (e) => {
     setValue(e.target?.value);
     setMessage(e.target.value);
+    console.log(message);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // send to db
+    client.message = message;
+    console.log(client);
+    sendMessage(client);
   };
 
   const handleClientChanges = (e) => {
@@ -88,7 +97,13 @@ const Contact = () => {
   };
 
   const isClientInfoValid = () => {
-    if (!client.firstName || !client.lastName || !isEmailValid()) return false;
+    if (
+      !isMessageValid() ||
+      !client.firstName ||
+      !client.lastName ||
+      !isEmailValid()
+    )
+      return false;
     return true;
   };
 
@@ -171,7 +186,7 @@ const Contact = () => {
                       ref={textareaRef}
                       className="bg-slate-100 w-full rounded-md p-2 pr-10 focus:outline outline-orange overflow-hidden"
                       placeholder="Write something here... (name,prename and email will be asked after you send)"
-                      onChange={handleChange}
+                      onChange={handleChangeMessage}
                     ></motion.textarea>
                     <button
                       type="button"
