@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Nav />
-      <div className="app flex flex-col gap-10">
+      <div className="app flex justify-center flex-col max-w-6xl gap-10 my-24 sm:w-full">
         <Profile />
         <Projects />
         <Contact />

@@ -20,9 +20,9 @@ const Project = ({ name, imgSrc }) => {
   }, [isActive]);
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <div
-        className={`flex items-center justify-between p-2 w-full h-10 bg-lgrey ${roundedClass}`}
+        className={`flex items-center justify-between p-2 h-10 bg-lgrey ${roundedClass}`}
       >
         <span className="font-bold text-white">{name}</span>
         <motion.img

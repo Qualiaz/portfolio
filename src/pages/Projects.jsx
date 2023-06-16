@@ -30,7 +30,7 @@ const ActiveProjectProvider = ({ children }) => {
 
 const Projects = () => {
   return (
-    <div className="projects flex flex-col m-2 gap-6">
+    <div className="projects flex flex-col m-2 gap-6 ">
       <div className="relative flex flex-col m-2 ">
         <span className="text-white font-bold text-2xl ml-2">Projects</span>
         <img
