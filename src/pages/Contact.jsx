@@ -65,12 +65,16 @@ const Contact = () => {
   const textareaRef = useRef();
   const [value, setValue] = useState("");
 
+  const handleTouchMove = (event) => {
+    event.preventDefault();
+  };
+
   useAutoSizeTextArea(textareaRef.current, value, setHeight);
 
   const handleChangeMessage = (e) => {
+    e.preventDefault();
     setValue(e.target?.value);
     setMessage(e.target.value);
-    console.log(message);
   };
 
   const handleSubmit = (e) => {
@@ -105,6 +109,10 @@ const Contact = () => {
     )
       return false;
     return true;
+  };
+
+  const handleFocus = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -184,7 +192,7 @@ const Contact = () => {
                   >
                     <motion.textarea
                       ref={textareaRef}
-                      className="bg-slate-100 w-full rounded-md p-2 pr-10 focus:outline outline-orange overflow-hidden"
+                      className=" bg-slate-100 w-full rounded-md p-2 pr-10 focus:outline outline-orange overflow-hidden"
                       placeholder="Write something here... (name,prename and email will be asked after you send)"
                       onChange={handleChangeMessage}
                     ></motion.textarea>

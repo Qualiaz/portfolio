@@ -11,9 +11,12 @@
   font-family: "Maven Pro", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #181818;
-  /* height: 100vh; */
 }
 
 #root {
