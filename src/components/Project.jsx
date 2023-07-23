@@ -2,8 +2,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
 import svgDropDown from "../assets/drop-down.svg";
 import { ActiveProjectContext } from "../pages/Projects";
+import Stack from "./Stack";
 
-const Project = ({ name, imgSrc }) => {
+const Project = ({ name, imgSrc, link, description, stack }) => {
   const [roundedClass, setRoundedClass] = useState("rounded-md");
   const { activeProject, onSetActive } = useContext(ActiveProjectContext);
   const isActive = activeProject === name;
@@ -56,31 +57,15 @@ const Project = ({ name, imgSrc }) => {
                     />
                   </div>
                   <div className="flex gap-2">
+                    <Stack stack={stack} />
                     <button className="bg-orange text-white font-bold p-3 rounded-md">
-                      Stack
-                    </button>
-                    <button className="bg-orange text-white font-bold p-3 rounded-md">
-                      Website
+                      <a href={link}>website</a>
                     </button>
                   </div>
                 </div>
 
                 <div className="flex-1 p-2 mb-2 overflow-scroll">
-                  <motion.p className="">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis est delectus nihil totam nisi assumenda aspernatur
-                    ea ut sint cumque, quo ratione cum ad sed commodi? Aut
-                    obcaecati nobis cumque eos quasi similique porro nulla,
-                    dolor omnis rerum sapiente voluptates alias qui quas dolores
-                    facilis tempora voluptatem sint reiciendis? Est, tempora
-                    fuga soluta iste commodi error accusantium quam recusandae
-                    expedita inventore molestiae. Repudiandae iusto eum eius
-                    aliquam at consequuntur ad inventore quisquam optio? Sed,
-                    ullam deleniti excepturi, vel harum deserunt minima ratione
-                    neque suscipit id debitis quibusdam totam veritatis iste
-                    iusto, eveniet temporibus soluta. Suscipit consequatur error
-                    id expedita placeat.
-                  </motion.p>
+                  <motion.p className="">{description}</motion.p>
                 </div>
               </section>
             </div>

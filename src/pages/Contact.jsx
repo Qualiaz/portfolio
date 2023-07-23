@@ -4,8 +4,6 @@ import svgCurveUnderline from "../assets/curve-underline.svg";
 import useAutoSizeTextArea from "../hooks/useAutosizeTextArea";
 import svgSend from "../assets/send.svg";
 import svgRequired from "../assets/required.svg";
-import { db } from "../firebase/firebase.config";
-import { collection, addDoc } from "firebase/firestore";
 import useSendMessageToDb from "../hooks/useSendMessageToDb";
 
 const Required = ({ field }) => {

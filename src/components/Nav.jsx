@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-import svgCurveUnderline from "../assets/curve-underline.svg";
-import { motion, useAnimation, useScroll } from "framer-motion";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const homeControls = useAnimation();
@@ -11,16 +10,6 @@ const Nav = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [scrollPos, setScrollPos] = useState(0);
   const [bgFade, setBgFade] = useState(true);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setIsNavVisible(window.scrollY <= scrollPos);
-  //     setScrollPos(window.scrollY);
-  //     setBgFade(window.scrollY < 1);
-  //   };
-  //   window.addEventListener("wheel", handleScroll);
-  //   return () => window.removeEventListener("wheel", handleScroll);
-  // }, [scrollPos]);
 
   useEffect(() => {
     const handleScroll = () => {
