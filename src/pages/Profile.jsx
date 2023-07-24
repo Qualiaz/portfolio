@@ -21,7 +21,7 @@ const Profile = () => {
           <button className="bg-orange text-white p-3 rounded-lg font-semibold">
             <a
               className="w-full"
-              href="https://firebasestorage.googleapis.com/v0/b/portofolio-da5ad.appspot.com/o/cv(en).pdf?alt=media&token=68c25e21-5706-4731-a2c7-125427bf1f0f"
+              href="https://firebasestorage.googleapis.com/v0/b/portofolio-da5ad.appspot.com/o/cv(en).pdf?alt=media&token=24aa90e2-3362-4f70-abb6-aebeda4ea2ab"
             >
               Open CV
             </a>
