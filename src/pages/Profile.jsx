@@ -1,4 +1,3 @@
-import bg from "../assets/bg-orange-vector.svg";
 import illustration from "../assets/placeholder-illustration.png";
 import svgLinkedin from "../assets/linkedin.svg";
 import svgGithub from "../assets/github.svg";
@@ -14,15 +13,15 @@ const Profile = () => {
           <p className="font-bold text-2xl">Hey there, I'm</p>
           <p className="font-bold text-orange text-3xl">Robert Apostoiu</p>
           <p className="font-semibold">
-            Self taught coder with over 2 years of experience. Looking forward
-            to work with you!
+            Self taught coder with over 2 years of personal experience. Looking
+            forward to work with you!
           </p>
         </div>
         <div className="flex gap-1">
           <button className="bg-orange text-white p-3 rounded-lg font-semibold">
             <a
               className="w-full"
-              href="https://firebasestorage.googleapis.com/v0/b/portofolio-da5ad.appspot.com/o/harry-potter.pdf?alt=media&token=fd28e470-47d0-4477-973a-99727d607f66"
+              href="https://firebasestorage.googleapis.com/v0/b/portofolio-da5ad.appspot.com/o/cv(en).pdf?alt=media&token=68c25e21-5706-4731-a2c7-125427bf1f0f"
             >
               Open CV
             </a>
@@ -33,7 +32,7 @@ const Profile = () => {
             </a>
           </button>
           <button>
-            <a href="#">
+            <a href="https://github.com/Qualiaz">
               <img className="w-10" src={svgGithub} alt="github" />
             </a>
           </button>

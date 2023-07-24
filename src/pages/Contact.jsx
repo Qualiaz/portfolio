@@ -347,7 +347,7 @@ const Contact = () => {
               Robert Apostoiu
             </span>
             <span className="ml-10 font-semibold text-white">
-              qualiaz@protonmail.com
+              robertapostoiu96@gmail.com
             </span>
             <span className="ml-10 font-semibold text-white">
               +40 799483823

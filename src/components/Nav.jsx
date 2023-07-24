@@ -139,7 +139,6 @@ const Nav = () => {
           />
         )}
       </motion.header>
-      {/* <div ref={ref} style={{ height: "200vh" }} /> */}
     </>
   );
 };

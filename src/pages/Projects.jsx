@@ -1,12 +1,8 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import svgCurveUnderline from "../assets/curve-underline.svg";
-import svgDropDown from "../assets/drop-down.svg";
-import { motion, AnimatePresence } from "framer-motion";
 import pngTraveler2048 from "../assets/asd.gif";
 import pngGamifyTodo from "../assets/gamify-todo.png";
 import pngAccessiblity from "../assets/accessibility.png";
-import typescriptSvg from "../assets/typescript.svg";
-import scssSvg from "../assets/scss.svg";
 import Project from "../components/Project";
 
 export const ActiveProjectContext = createContext();
@@ -60,7 +56,7 @@ const Projects = () => {
           <Project
             name="Gamify Todo"
             imgSrc={pngGamifyTodo}
-            link="https://gamify-todo-e8896.firebaseapp.com"
+            link="https://gamify-todo-e8896.firebaseapp.com/auth.html"
             description={gamifyTodoDescription}
             stack="html, scss, javascript, firebase"
           />
@@ -69,7 +65,7 @@ const Projects = () => {
             imgSrc={pngAccessiblity}
             link="https://web-accessibility-six.vercel.app/"
             description={accessibilityApp}
-            stack="react, javascript, scss"
+            stack="react, javascript, css"
           />
         </ActiveProjectProvider>
       </div>
