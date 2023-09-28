@@ -1,4 +1,3 @@
-import React from "react";
 import Profile from "./Profile";
 import Projects from "./Projects";
 import Contact from "./Contact";

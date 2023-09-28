@@ -64,7 +64,7 @@ const Project = ({ name, imgSrc, link, description, stack }) => {
                   </div>
                 </div>
 
-                <div className="flex-1 p-2 mb-2 overflow-scroll">
+                <div className="flex-1 p-2 mb-2 overflow-auto">
                   <motion.p className="">{description}</motion.p>
                 </div>
               </section>
